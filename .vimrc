@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved, required
+set relativenumber
 set title
 filetype off                  " required
 helptags ~/.vim/doc
@@ -86,6 +87,13 @@ let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on cu
 
 
 
+"setup for delimitmate
+    autocmd filetype htmldjango let g:delimitMate_autoclose = 0
+
+
+
+
+
 "set up for ycm
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
 let g:ycm_python_binary_path = 'python'
@@ -139,7 +147,7 @@ let g:syntastic_cpp_checkers = ['cppcheck' , 'cppclean']
 
 "vim keybinding
 "
-let mapleader = "\<space>"
+let mapleader = ","
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>j :+10<cr>
@@ -153,10 +161,3 @@ nnoremap <F6> :silent !clear <Enter>
 nnoremap <leader>pf :SyntasticCheck flake8<cr>
 nnoremap <leader>pp :SyntasticCheck pylint<cr>
 nnoremap <leader>cc :SyntasticCheck cppcheck<cr>
-inoremap II <Esc>I
-inoremap AA <Esc>A
-inoremap OO <Esc>O
-inoremap CC <Esc>C
-inoremap SS <Esc>S
-inoremap DD <Esc>dd
-inoremap UU <Esc>u
