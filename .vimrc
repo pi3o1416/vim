@@ -88,7 +88,9 @@ let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on cu
 
 
 "setup for delimitmate
-    autocmd filetype htmldjango let g:delimitMate_autoclose = 0
+let delimitMate_expand_space = 1
+let delimitMateBackspace = 1
+autocmd filetype htmldjango let b:delimitMate_matchpairs = "(:),[:],<:>"
 
 
 
@@ -161,3 +163,5 @@ nnoremap <F6> :silent !clear <Enter>
 nnoremap <leader>pf :SyntasticCheck flake8<cr>
 nnoremap <leader>pp :SyntasticCheck pylint<cr>
 nnoremap <leader>cc :SyntasticCheck cppcheck<cr>
+noremap <C-l> :tabnext<CR>
+noremap <C-h> :tabprevious<CR>
