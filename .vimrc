@@ -163,5 +163,5 @@ nnoremap <F6> :silent !clear <Enter>
 nnoremap <leader>pf :SyntasticCheck flake8<cr>
 nnoremap <leader>pp :SyntasticCheck pylint<cr>
 nnoremap <leader>cc :SyntasticCheck cppcheck<cr>
-noremap <C-j> :tabnext<CR>
-noremap <C-k> :tabprevious<CR>
+nnoremap <C-l> :tabnext<CR>
+nnoremap <C-h> :tabprevious<CR>
