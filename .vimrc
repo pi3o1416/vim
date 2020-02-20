@@ -1,7 +1,7 @@
-set nocompatible              " be iMproved, required
-set relativenumber
-set title
-filetype off                  " required
+set nocompatible            " be iMproved, required
+set relativenumber          " show relative number top to bottom
+set title                   " show title top of terminal
+filetype off                " required
 helptags ~/.vim/doc
 filetype plugin on
 
@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-fugitive' 
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
 Plugin 'Raimondi/delimitMate'
@@ -85,8 +86,7 @@ let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on cu
 
 
 
-
-
+ 
 "setup for delimitmate
 let delimitMate_expand_space = 1
 let delimitMateBackspace = 1
@@ -163,5 +163,5 @@ nnoremap <F6> :silent !clear <Enter>
 nnoremap <leader>pf :SyntasticCheck flake8<cr>
 nnoremap <leader>pp :SyntasticCheck pylint<cr>
 nnoremap <leader>cc :SyntasticCheck cppcheck<cr>
-noremap <C-l> :tabnext<CR>
-noremap <C-h> :tabprevious<CR>
+noremap <C-j> :tabnext<CR>
+noremap <C-k> :tabprevious<CR>
