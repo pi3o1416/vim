@@ -1,0 +1,9 @@
+pane	0	1	:bash	1	:*	1	:/home/monir	1	bash	:
+pane	hello	1	:vimrc	1	:*	1	:/home/monir	1	vim	:vim .vimrc
+pane	hello	2	:blog-model	0	:-	1	:/home/monir/Documents/python/django/mysite/blog	1	vim	:vim models.py
+pane	hello	3	:top	0	:	1	:/home/monir	1	htop	:htop
+window	0	1	1	:*	c5fd,149x36,0,0,0
+window	hello	1	1	:*	c5fe,149x36,0,0,1
+window	hello	2	0	:-	c5ff,149x36,0,0,2
+window	hello	3	0	:	c600,149x36,0,0,3
+state	hello	0
