@@ -69,7 +69,7 @@ autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 autoindent
 "set t_Co=256
 set background=light
 colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'light'
+let g:gruvbox_contrast_dark = 'dark'
 
 
 " tender
@@ -102,7 +102,7 @@ let g:ycm_python_binary_path = 'python'
 let g:ycm_complete_in_comments = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_filetype_blacklist = {'html' : 1}
+"let g:ycm_filetype_blacklist = {'html' : 1}
 let g:ycm_semantic_triggers =  {
   \ 'c' : ['re!\w{2}'],
   \ 'cpp' : ['re!\w{2}'],
