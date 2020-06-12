@@ -3,15 +3,15 @@
 
 echo "session name"
 read session
-echo "number of app to be opend"
+echo "number of app"
 read total_app
-tmux new-session -d -s $session -n $session -c ~/Documents/python/django/$session
+tmux new-session -d -s $session -n $session -c ~/Documents/python/django/$session/$session
 counter=1
 while [ $counter -le $total_app ]
 do
     echo "app name"
     read temp
-    tmux new-window -n $temp -c ~/Documents/python/django/$session
+    tmux new-window -n $temp -c ~/Documents/python/django/$session/$temp
     ((counter++))
 done
 tmux new-window -n shell -c ~/Documents/python/django/$session
