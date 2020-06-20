@@ -1,6 +1,7 @@
 set nocompatible            " be iMproved, required
 set relativenumber          " show relative number top to bottom
 set title                   " show title top of terminal
+set clipboard=unnamedplus
 filetype off                " required
 helptags ~/.vim/doc
 filetype plugin on
@@ -156,6 +157,7 @@ nnoremap <leader>j :+10<cr>
 nnoremap <leader>k :-10<cr>
 autocmd filetype python nnoremap <F9> :w <bar>!python %<cr>
 autocmd filetype python nnoremap <F5> :w <bar>make py<cr>
+autocmd filetype html nnoremap <leader>m :setfiletype htmldjango<cr>
 autocmd FileType cpp nnoremap <F9> :w !clear <bar>make<cr>
 autocmd FileType cpp nnoremap <F5> :!./%:r<cr>
 autocmd FileType c nnoremap <F5> :!./%:r<cr>
@@ -164,4 +166,4 @@ nnoremap <leader>pf :SyntasticCheck flake8<cr>
 nnoremap <leader>pp :SyntasticCheck pylint<cr>
 nnoremap <leader>cc :SyntasticCheck cppcheck<cr>
 nnoremap <C-l> :tabnext<CR>
-nnoremap <C-h> :tabprevious<CR>
+noremap <C-h> :tabprevious<CR>
