@@ -11,10 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 
-"Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-fugitive' 
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
 Plugin 'Raimondi/delimitMate'
@@ -23,9 +20,6 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'SirVer/ultisnips'
-"Plugin 'MarcWeber/vim-addon-mw-utils'
-"Plugin 'tomtom/tlib_vim'
-"Plugin 'garbas/vim-snipmate'
 
 " Optional:
 Plugin 'honza/vim-snippets'
@@ -119,16 +113,6 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
 
-"set up indentline
-"let g:indentLine_conceallevel = 4 
-
-
-
-
-"set up tagbar
-noremap <F8> :TagbarToggle<CR>
-
-
 
 
 "set up syntastic
@@ -140,10 +124,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['pylint , flake8']
+let g:syntastic_python_checkers = ['pylint', 'flake8']
 let g:syntastic_cpp_checkers = ['cppcheck' , 'cppclean']
-
-
 
 
 
