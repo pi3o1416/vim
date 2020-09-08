@@ -1,3 +1,4 @@
+let mapleader = ","
 set nocompatible            " be iMproved, required
 set relativenumber          " show relative number top to bottom
 set title                   " show title top of terminal
@@ -120,19 +121,20 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] } 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pylint', 'flake8']
 let g:syntastic_cpp_checkers = ['cppcheck' , 'cppclean']
+nnoremap <leader>E :SyntasticCheck<CR>
 
 
 
 
 "vim keybinding
 "
-let mapleader = ","
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>j :+10<cr>
